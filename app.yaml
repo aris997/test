@@ -1,0 +1,3 @@
+runtime: python312
+entrypoint: gunicorn --log-level=debug -b :$PORT app:app
+instance_class: F1
