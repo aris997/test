@@ -1,0 +1,19 @@
+name: My first Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Workflow say hello"
+        default: "Greevus general"
+        required: false
+        type: string
+
+jobs:
+  say_hello:
+    name: "a Star Wars cit"
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: "step to says hello"
+        run: echo "Hello there ${{ github.event.inputs.name }}"
